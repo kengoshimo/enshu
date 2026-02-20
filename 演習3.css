@@ -1,0 +1,4 @@
+.midashi{font-weight: 600;font-size: 32px;margin-top: 60px;}
+.setumei{font-size: 18px;margin-top: 30px;align-items: center;}
+@media(max-width:5000px){body {background-color: blue;}}
+<!--画面最大サイズ5000px以下で背景を青くする-->
