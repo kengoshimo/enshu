@@ -16,8 +16,21 @@ const targetDate = function() {
     const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
     const seconds = Math.floor((timeDifference / 1000) % 60);
     
-    birthdayElement.textContent = `次の誕生日まで あと${days} 日 ${hours} 時間 ${minutes} 分 ${seconds} 秒`;
-};
-
+    birthdayElement.textContent = `あと ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`;
+}
 setInterval(targetDate, 1000);
 targetDate();
+
+const ageElement = document.getElementById("age");
+const calculateAge = function() {
+    const now = new Date();
+    const birthYear = 2003; // 誕生年を指定
+    const birthMonth = 4; // 誕生月を指定
+    const birthDay = 4; // 誕生日を指定
+    let age = now.getFullYear() - birthYear; // 年齢を計算
+    if (now.getMonth() + 1 < birthMonth || (now.getMonth() + 1 === birthMonth && now.getDate() < birthDay)) {
+        age--; // 誕生日がまだ来ていない場合は年齢を1減らす
+    }
+    ageElement.textContent = `現在の年齢: ${age}歳`;
+}
+calculateAge();
