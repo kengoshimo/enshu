@@ -8,8 +8,8 @@
     font-size: 1.6rem;
 }
 
-@media(max-width:600px){
+@media(max-width:450px){
     .box {
-              font-size: 60px;     /* 赤背景なので文字を白く */
+              font-size: 45px;     
     }
 }
